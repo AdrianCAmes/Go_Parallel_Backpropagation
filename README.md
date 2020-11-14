@@ -15,7 +15,7 @@ Esta es la etapa en la cual la red neuronal realiza el aprendizaje. Para ello, l
 El dataset que se tomó como referencia para el entrenamiento es el conocido dataset de Iris, el cual contiene información acerca de la clasificación de flores Iris dependiendo de ciertas características. Nótese que Iris es un tipo de flor y para el presente trabajo se están tomando en cuenta dos de sus clases: Iris Setosa e Iris Versicolour.
 		
 Cada patrón de este dataset contiene cinco atributos, los cuales serán explicados a continuación.
-Los cuatro primeros valores de cada patrón de entraniemnto representan lo siguiente:
+Los cuatro primeros valores de cada patrón de entrenamiento representan lo siguiente:
 * Longitud del sépalo en cm.
 * Ancho del sépalo en cm.
 * Longitud del pétalo en cm.
@@ -27,7 +27,7 @@ El último atributo representa a qué clase pertenece la flor Iris evaluada, as�
   - 1 -> Iris Versicolour
 
 ## ¿Cómo se paraleliza el algoritmo?
-En este trabajo, se propone paralelizar el algoritmo dividiendo el set de datos inicial en cuatro partes. Luego de la división, se realizará paralelamente la propagación hacia adelante de cada una de las partes y, posteriormente, una vez que se han propagado todas, se avisa al hilo principal mediante el uso de canales y se prosigue con una sola etapa de propagación hacia atrás (aprendizaje). Una ejecución de lo mencionado anteriormente es considerado como una época, y el algoritmo realizará "n" cantidad de épocas para su aprendizaje. Luego, se plantea calcular el error de todo el modelo para estimar qué tan precisa es la predicción de resultados en la red neuronal. Esto se logará mediante el cálculo del error cuadrático medio de todas épocas. Finalmente, las métricas del modelo (error y tiempo de ejecución) serán impresas para su visualización.
+En este trabajo, se propone paralelizar el algoritmo dividiendo el set de datos inicial en cuatro partes. Luego de la división, se realizará paralelamente la propagación hacia adelante de cada una de las partes y, posteriormente, una vez que se han propagado todas, se avisa al hilo principal mediante el uso de canales y se prosigue con una sola etapa de propagación hacia atrás (aprendizaje). Una ejecución de lo mencionado anteriormente es considerada como una época, y el algoritmo realizará "n" cantidad de épocas para su aprendizaje. Luego, se plantea calcular el error de todo el modelo para estimar qué tan precisa es la predicción de resultados en la red neuronal. Esto se logará mediante el cálculo del error cuadrático medio de todas épocas. Finalmente, las métricas del modelo (error y tiempo de ejecución) serán impresas para su visualización.
 
 ## Topología de red neural
 La topología de la red implementada en el trabajo es la de perceptrón multicapa. Esta consta de una capa de entrada, con cuatro neuronas; una capa intermedia, con dos neuronas; y una capa de salida, con una neurona.
